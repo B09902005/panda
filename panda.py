@@ -31,14 +31,23 @@ print(data.str.replace('wuwuboss','loser'),'\n')
 print(data.str.replace('wuwuboss','loser').str.cat(sep = '_'),'\n')
 
 
+print('\n\n\n')
 
 
-'''
 data = pandas.DataFrame({'name':['wuwuboss','snow','ppm','yousus','ac'],
                          'color':['purple','blue','white','yellow','orange'],
                          'number':[28,29,19,17,9],
                          'bomb':[-100,100,50,50,50]})
 print(data,'\n')
-print(data['number'],'\n')  # show number
-print(data.iloc[1],'\n')    # show person
-'''
+print('size: ', data.size)
+print('shape: ', data.shape)
+print('index: ',data.index, '\n')
+
+print(data['number'],'\n')  # show number (get a Series)
+print(data.iloc[1],'\n')    # show person (get a Series)
+
+data['department'] = ['CS','ME','EE','ME','CS']
+data.loc[5] = ['saibo','blue',5,50,'EE']
+data['bomb'] *= 2
+data['name'] = data['name'].str.upper()
+print(data)
