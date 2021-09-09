@@ -49,4 +49,10 @@ print(two4.T)
 print(two4.ravel())
 print(two4.reshape(2,1,3))  # expand to 1D
 print(numpy.arange(16).reshape(4,4).T)
+
+print(numpy.vstack((two0,two1)))
+print(numpy.hstack((two0,two1)))
+print(numpy.hstack((two0,two1,two2)))
+print(numpy.vsplit(two0,2))
+print(numpy.hsplit(two0,3))
 '''
